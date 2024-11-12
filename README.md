@@ -1,4 +1,12 @@
-# BGP Project Repository
+# Jaringan Komputer Lanjut A
+Anggota Kelompok :
+Dani Adrian (225150201111009) - [@daniadrian](https://github.com/daniadrian) 
+
+Riady Wiguna (225150200111013) - [@skiadra](https://github.com/Skiadra)
+
+Muhammad Zakki Islami (225150201111011) - [@zakkiislamii](https://github.com/zakkiislamii)
+
+## BGP Project Repository
 Welcome to the BGP Project Repository! This repository is dedicated to developing and studying Border Gateway Protocol (BGP) implementations and applications. This document provides a comprehensive guide to help you get started, understand the project structure, and contribute effectively.
 
 ## 📖 Project Overview
