@@ -7,49 +7,49 @@ Riady Wiguna (225150200111013) - [@skiadra](https://github.com/Skiadra)
 
 Muhammad Zakki Islami (225150201111011) - [@zakkiislamii](https://github.com/zakkiislamii)
 
-## BGP Project Repository
-Welcome to the BGP Project Repository! This repository is dedicated to developing and studying Border Gateway Protocol (BGP) implementations and applications. This document provides a comprehensive guide to help you get started, understand the project structure, and contribute effectively.
+# Mininet 🌐
 
-## 📖 Project Overview
-BGP is the protocol that allows data routing across the internet. This project focuses on understanding BGP configurations, analyzing BGP routing behavior, and implementing various BGP scenarios for network management and optimization.
 
-This repository is intended for educational purposes, providing materials and examples to explore BGP concepts in depth.
+Welcome! This repository contains a collection of networking projects using Mininet. Here you'll find various routing implementations from basic static routing to advanced protocols like SRv6. 
 
-## 🧑‍🏫 Target Audience
-This repository is designed with students, network engineers, and faculty members in mind. Whether you are a beginner exploring BGP basics or an advanced user refining BGP configurations, you will find relevant resources here.
+## What's Inside 📦
 
-## 🌟 Key Features
-- Hands-on BGP Scenarios: Examples and configuration files to simulate BGP in different network topologies.
-- BGP Analysis Tools: Scripts and tools to monitor and analyze BGP routes.
-- Comprehensive Documentation: Detailed explanations of BGP concepts, configurations, and common troubleshooting techniques.
-- Sample Assignments: Exercises and labs that can be used for teaching and learning.
+### 1. Static Routing 🎯
+- Custom network topology with multiple paths
+- Static route configurations
+- Network connectivity tests
 
-## 📁 Repository Structure
-Here is an overview of the key folders and files in this repository:
-- /docs: Documentation files explaining BGP basics, configuration guides, and use cases.
-- /scenarios: Ready-to-use BGP configuration files for different network setups.
-- /scripts: Python and Bash scripts for BGP analysis, route monitoring, and log management.
-- /assignments: Sample assignments and labs for practice and testing.
+### 2. OSPF Routing 🔄
+- Single Area and Multi-Area OSPF implementations
+- Area border router setups
 
-## 🚀 Getting Started
-To start using or contributing to this project:
+### 3. BGP Inter-Domain Routing 🌍
+- BGP (Border Gateway Protocol) setup
+- AS (Autonomous System) configurations
+- Route advertisement and filtering
 
-1. Clone the repository
+### 4. Advanced BGP Configuration 🔗
+- eBGP and iBGP implementations
+- BGP policy configurations
+
+### 5. SRv6 (Segment Routing IPv6) 🚀
+*Coming Soon*
+
+## Quick Start 🚀
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/bgp-project.git
+git clone https://github.com/daniadrian/mininet.git
+cd mininet
 ```
 
-2. Install Dependencies (if any): Check the requirements.txt for any dependencies and install them using:
+2. Run any project:
+```bash
+sudo python3 ospf.py
 ```
-pip install -r requirements.txt
-```
 
-3. Explore the Documentation: Start with the /docs folder to familiarize yourself with BGP basics and the project’s structure.
+## License 📝
+This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details - feel free to use it however you like!
 
-## 📚 Learning Resources
-If you are new to BGP, we recommend starting with:
-- docs/introduction.md: Basic concepts of BGP
-- docs/configuration_guide.md: Step-by-step guide to configure BGP
-- docs/troubleshooting.md: Common BGP issues and solutions
-
-Thank you for being part of this project! We hope this repository becomes a valuable resource for learning and mastering BGP. Happy routing! 🎉
+## Questions? 💭
+Just open an issue in the repository - we're here to help!
