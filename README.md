@@ -32,7 +32,7 @@ Welcome! This repository contains a collection of networking projects using Mini
 - eBGP and iBGP implementations
 - BGP policy configurations
 
-[Advanced BGP Readme](bgp-routing/readme.md)
+[Advanced BGP README](bgp-routing/README.md)
 
 ### 5. SRv6 (Segment Routing IPv6) 🚀
 *Coming Soon*
