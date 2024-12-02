@@ -204,6 +204,116 @@ net.stop()
 - **net.stop()**: Stops the Mininet network and cleans up the configuration.
 
 ---
+Berdasarkan informasi yang Anda berikan, tampaknya Anda sedang menjalankan skrip Python untuk mengatur jaringan statis di Mininet, dan berhasil melakukan ping antara dua host. Berikut adalah contoh langkah-langkah yang bisa Anda masukkan ke dalam `README.md` di repository GitHub Anda, untuk menjelaskan proses ini secara detail.
+
+
+## Getting Started
+
+Follow these steps to set up the network and test static routing between two hosts.
+
+### Step 1: Clone the Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/mininet-github.git
+cd mininet-github/mininet/static-routing-mininet
+```
+
+### Step 2: Install Mininet
+
+If you don’t have Mininet installed, follow the installation instructions on the [Mininet website](http://mininet.org/download/) or use the following commands for a typical Ubuntu-based system:
+
+```bash
+sudo apt-get update
+sudo apt-get install mininet
+```
+
+### Step 3: Run the Static Routing Script
+
+Navigate to the `static-routing-mininet` directory and run the Python script:
+
+```bash
+cd static-routing-mininet
+sudo python3 static_routing_2rtr.py
+```
+
+This script will:
+
+1. Add two routers (`r1` and `r2`)
+2. Add two hosts (`h1` and `h2`)
+3. Establish links between them
+4. Configure static routes between the routers
+5. Start the Mininet CLI
+
+### Step 4: Test Connectivity
+
+Once the script is executed, Mininet CLI will start. You can test the connectivity between `h1` and `h2` using the `ping` command:
+
+```bash
+mininet> h1 ping h2
+```
+
+You should see a successful ping response similar to this:
+
+```
+PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
+64 bytes from 192.168.2.2: icmp_seq=1 ttl=62 time=0.111 ms
+64 bytes from 192.168.2.2: icmp_seq=2 ttl=62 time=0.036 ms
+```
+
+Tentu! Berikut adalah kelanjutan dari langkah-langkah untuk `README.md` Anda, dengan menambahkan instruksi dan penjelasan terkait hasil perintah `traceroute` yang Anda berikan:
+
+---
+
+### Step 4: Test Connectivity
+
+Setelah skrip berhasil dijalankan, Anda dapat memverifikasi koneksi antara host `h1` dan `h2` dengan menggunakan perintah `ping`:
+
+```bash
+mininet> h1 ping h2
+```
+
+Jika konfigurasi Anda benar, Anda akan melihat hasil seperti berikut, yang menunjukkan bahwa `h1` dapat berkomunikasi dengan `h2`:
+
+```
+PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
+64 bytes from 192.168.2.2: icmp_seq=1 ttl=62 time=0.111 ms
+64 bytes from 192.168.2.2: icmp_seq=2 ttl=62 time=0.036 ms
+```
+
+### Step 5: Verify Network Path with Traceroute
+
+Untuk melihat jalur yang dilalui paket data dari `h1` ke `h2`, Anda dapat menggunakan perintah `traceroute`. Ini akan memberikan gambaran tentang router yang dilewati paket data dalam perjalanan menuju host tujuan.
+
+Jalankan perintah berikut di Mininet CLI:
+
+```bash
+mininet> h1 traceroute h2
+```
+
+Hasil traceroute akan menunjukkan bagaimana paket data melewati jaringan. Berikut adalah contoh hasil yang mungkin Anda lihat:
+
+```
+traceroute to 192.168.2.2 (192.168.2.2), 30 hops max, 60 byte packets
+ 1  192.168.1.1 (192.168.1.1)  0.145 ms  0.115 ms  0.111 ms
+ 2  10.10.1.2 (10.10.1.2)  0.107 ms  0.096 ms  0.090 ms
+ 3  192.168.2.2 (192.168.2.2)  0.085 ms  0.076 ms  0.069 ms
+```
+
+### Penjelasan Hasil Traceroute:
+
+- **Hop 1: 192.168.1.1**  
+  Paket pertama kali melewati router `r1` yang memiliki IP `192.168.1.1`. Ini adalah router pertama yang menghubungkan host `h1` ke jaringan.
+  
+- **Hop 2: 10.10.1.2**  
+  Paket kemudian diteruskan ke router kedua (`r2`) dengan IP `10.10.1.2`. Ini menunjukkan bahwa paket bergerak dari `r1` ke `r2`.
+
+- **Hop 3: 192.168.2.2**  
+  Akhirnya, paket mencapai host tujuan `h2` dengan IP `192.168.2.2`.
+
+Setiap hop menunjukkan waktu round-trip (RTT) dalam milidetik, yang menunjukkan bahwa jaringan Anda berfungsi dengan baik dan paket data mencapai tujuannya tanpa masalah.
+
 # Licencse
 This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
 
