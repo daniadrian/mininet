@@ -7,8 +7,8 @@ Riady Wiguna (225150200111013) - [@skiadra](https://github.com/Skiadra)
 
 Muhammad Zakki Islami (225150201111011) - [@zakkiislamii](https://github.com/zakkiislamii)
 
+---
 # Mininet 🌐
-
 
 Welcome! This repository contains a collection of networking projects using Mininet. Here you'll find various routing implementations from basic static routing to advanced protocols like SRv6. 
 
@@ -19,6 +19,9 @@ Welcome! This repository contains a collection of networking projects using Mini
 - Static route configurations
 - Network connectivity tests
 
+**Report** :
+[Static Routing README](static-routing-mininet/README.md)
+
 ### 2. OSPF Routing 🔄
 - Single Area and Multi-Area OSPF implementations
 - Area border router setups
@@ -28,11 +31,12 @@ Welcome! This repository contains a collection of networking projects using Mini
 - AS (Autonomous System) configurations
 - Route advertisement and filtering
 
-### 4. Advanced BGP Configuration 🔗
+### 4. iBGP & eBGP 🔗
 - eBGP and iBGP implementations
 - BGP policy configurations
 
-[Advanced BGP README](bgp-routing/README.md)
+**Report** :
+[iBGP & eBGP README](bgp-routing/README.md)
 
 ### 5. SRv6 (Segment Routing IPv6) 🚀
 *Coming Soon*
