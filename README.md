@@ -22,9 +22,12 @@ Welcome! This repository contains a collection of networking projects using Mini
 **Report** :
 [Static Routing README](static-routing-mininet/README.md)
 
-### 2. OSPF Routing 🔄
+### 2. OSPF (Intra-Domain-Routing) 🔄
 - Single Area and Multi-Area OSPF implementations
 - Area border router setups
+
+**Report** :
+[OSPF (Intra-Domain-Routing)](intra-domain-routing/README.md)
 
 ### 3. BGP Inter-Domain Routing 🌍
 - BGP (Border Gateway Protocol) setup
