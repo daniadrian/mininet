@@ -68,11 +68,14 @@ Follow these steps to set up the network and test static routing between two hos
 **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**
 
 4. **Verify the Clone**  
+
    After the cloning process completes, navigate to the cloned repository directory to ensure it was successfully downloaded:
+
    ```bash
    cd mininet
    ls
    ```
+
    You should see the files and folders from the repository.
 
 ## License 📝
