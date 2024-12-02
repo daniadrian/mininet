@@ -58,7 +58,7 @@ This topology consists of:
   - `r2-eth0: 192.168.2.1/24`
   - `r2-eth1: 10.10.1.2/30`
 
-**[IP and Default Gateway]**
+**IP and Default Gateway**
 - H1: 
   - `192.168.1.2/24 : 192.168.1.1`
 - H2: 
