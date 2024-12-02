@@ -33,6 +33,14 @@ Welcome! This repository contains a collection of networking projects using Mini
 - BGP (Border Gateway Protocol) setup
 - AS (Autonomous System) configurations
 - Route advertisement and filtering
+- **bgp-inter-scenario-1**
+- **bgp-inter-scenario-2**
+
+**Report bgp-inter-1** :
+[bgp-inter-1 README)](bgp-inter-1/README.md)
+
+**Report bgp-inter-2** :
+[bgp-inter-2 README)](bgp-inter-2/README.md)
 
 ### 4. iBGP & eBGP 🔗
 - eBGP and iBGP implementations
