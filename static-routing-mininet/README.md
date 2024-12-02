@@ -211,23 +211,33 @@ Berdasarkan informasi yang Anda berikan, tampaknya Anda sedang menjalankan skrip
 
 Follow these steps to set up the network and test static routing between two hosts.
 
-### Step 1: Clone the Repository
+1. **Navigate to your desired directory**  
+   Open your terminal and navigate to the folder where you want to clone the repository. For example:
+   ```bash
+   cd ~/mininet-coba-pull
+   ```
 
-Clone this repository to your local machine:
+2. **Clone the Repository**  
+   Use the `git clone` command followed by the repository URL:
+   ```bash
+   git clone https://github.com/daniadrian/mininet.git
+   ```
+   Example :
+![image](https://github.com/user-attachments/assets/17bf6edc-a7f7-4ffa-afd2-92c8c576e34b)
 
-```bash
-git clone https://github.com/your-username/mininet-github.git
-cd mininet-github/mininet/static-routing-mininet
-```
+3. **Authenticate**  
+   - When prompted, enter your GitHub username.
+   - Enter Personal Access Token :
 
-### Step 2: Install Mininet
+**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**
 
-If you don’t have Mininet installed, follow the installation instructions on the [Mininet website](http://mininet.org/download/) or use the following commands for a typical Ubuntu-based system:
-
-```bash
-sudo apt-get update
-sudo apt-get install mininet
-```
+4. **Verify the Clone**  
+   After the cloning process completes, navigate to the cloned repository directory to ensure it was successfully downloaded:
+   ```bash
+   cd mininet
+   ls
+   ```
+   You should see the files and folders from the repository.
 
 ### Step 3: Run the Static Routing Script
 
