@@ -204,45 +204,11 @@ net.stop()
 - **net.stop()**: Stops the Mininet network and cleans up the configuration.
 
 ---
-Berdasarkan informasi yang Anda berikan, tampaknya Anda sedang menjalankan skrip Python untuk mengatur jaringan statis di Mininet, dan berhasil melakukan ping antara dua host. Berikut adalah contoh langkah-langkah yang bisa Anda masukkan ke dalam `README.md` di repository GitHub Anda, untuk menjelaskan proses ini secara detail.
 
-
-## Getting Started
-
-Follow these steps to set up the network and test static routing between two hosts.
-
-1. **Navigate to your desired directory**  
-   Open your terminal and navigate to the folder where you want to clone the repository. For example:
-   ```bash
-   cd ~/mininet-coba-pull
-   ```
-
-2. **Clone the Repository**  
-   Use the `git clone` command followed by the repository URL:
-   ```bash
-   git clone https://github.com/daniadrian/mininet.git
-   ```
-   Example :
-![image](https://github.com/user-attachments/assets/17bf6edc-a7f7-4ffa-afd2-92c8c576e34b)
-
-3. **Authenticate**  
-   - When prompted, enter your GitHub username.
-   - Enter Personal Access Token :
-
-**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**
-
-4. **Verify the Clone**  
-   After the cloning process completes, navigate to the cloned repository directory to ensure it was successfully downloaded:
-   ```bash
-   cd mininet
-   ls
-   ```
-   You should see the files and folders from the repository.
-
-### Step 3: Run the Static Routing Script
+# Step-by-Step Guide
+## Step 1: Run the Static Routing Script
 
 Navigate to the `static-routing-mininet` directory and run the Python script:
-
 ```bash
 cd static-routing-mininet
 sudo python3 static_routing_2rtr.py
@@ -256,7 +222,7 @@ This script will:
 4. Configure static routes between the routers
 5. Start the Mininet CLI
 
-### Step 4: Test Connectivity
+### Step 2: Test Connectivity
 
 Once the script is executed, Mininet CLI will start. You can test the connectivity between `h1` and `h2` using the `ping` command:
 
@@ -272,19 +238,14 @@ PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
 64 bytes from 192.168.2.2: icmp_seq=2 ttl=62 time=0.036 ms
 ```
 
-Tentu! Berikut adalah kelanjutan dari langkah-langkah untuk `README.md` Anda, dengan menambahkan instruksi dan penjelasan terkait hasil perintah `traceroute` yang Anda berikan:
-
----
-
-### Step 4: Test Connectivity
-
-Setelah skrip berhasil dijalankan, Anda dapat memverifikasi koneksi antara host `h1` dan `h2` dengan menggunakan perintah `ping`:
+### Step 3: Test Connectivity
+After the script has been successfully executed, you can verify the connection between the hosts `h1` and `h2` using the `ping` command:
 
 ```bash
 mininet> h1 ping h2
 ```
 
-Jika konfigurasi Anda benar, Anda akan melihat hasil seperti berikut, yang menunjukkan bahwa `h1` dapat berkomunikasi dengan `h2`:
+If your configuration is correct, you will see a result like the one below, indicating that `h1` can communicate with `h2`:
 
 ```
 PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
@@ -292,17 +253,17 @@ PING 192.168.2.2 (192.168.2.2) 56(84) bytes of data.
 64 bytes from 192.168.2.2: icmp_seq=2 ttl=62 time=0.036 ms
 ```
 
-### Step 5: Verify Network Path with Traceroute
+### Step 4: Verify Network Path with Traceroute
 
-Untuk melihat jalur yang dilalui paket data dari `h1` ke `h2`, Anda dapat menggunakan perintah `traceroute`. Ini akan memberikan gambaran tentang router yang dilewati paket data dalam perjalanan menuju host tujuan.
+To view the path taken by data packets from `h1` to `h2`, you can use the `traceroute` command. This will provide an overview of the routers the data packets pass through on their way to the destination host.
 
-Jalankan perintah berikut di Mininet CLI:
+Run the following command in the Mininet CLI:
 
 ```bash
 mininet> h1 traceroute h2
 ```
 
-Hasil traceroute akan menunjukkan bagaimana paket data melewati jaringan. Berikut adalah contoh hasil yang mungkin Anda lihat:
+The traceroute results will show how the data packets traverse the network. Below is an example of the result you might see:
 
 ```
 traceroute to 192.168.2.2 (192.168.2.2), 30 hops max, 60 byte packets
@@ -311,18 +272,20 @@ traceroute to 192.168.2.2 (192.168.2.2), 30 hops max, 60 byte packets
  3  192.168.2.2 (192.168.2.2)  0.085 ms  0.076 ms  0.069 ms
 ```
 
-### Penjelasan Hasil Traceroute:
+#### Traceroute Results Explanation:
 
 - **Hop 1: 192.168.1.1**  
-  Paket pertama kali melewati router `r1` yang memiliki IP `192.168.1.1`. Ini adalah router pertama yang menghubungkan host `h1` ke jaringan.
-  
+  The packet first passes through router `r1`, which has the IP `192.168.1.1`. This is the first router connecting host `h1` to the network.
+
 - **Hop 2: 10.10.1.2**  
-  Paket kemudian diteruskan ke router kedua (`r2`) dengan IP `10.10.1.2`. Ini menunjukkan bahwa paket bergerak dari `r1` ke `r2`.
+  The packet is then forwarded to the second router (`r2`) with the IP `10.10.1.2`. This indicates the packet's movement from `r1` to `r2`.
 
 - **Hop 3: 192.168.2.2**  
-  Akhirnya, paket mencapai host tujuan `h2` dengan IP `192.168.2.2`.
+  Finally, the packet reaches the destination host `h2` with the IP `192.168.2.2`.
 
-Setiap hop menunjukkan waktu round-trip (RTT) dalam milidetik, yang menunjukkan bahwa jaringan Anda berfungsi dengan baik dan paket data mencapai tujuannya tanpa masalah.
+Each hop shows the round-trip time (RTT) in milliseconds, indicating that your network is functioning properly and the data packets are reaching their destination without issues.
+
+--- 
 
 # Licencse
 This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
