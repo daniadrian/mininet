@@ -27,7 +27,7 @@ Welcome! This repository contains a collection of networking projects using Mini
 - Area border router setups
 
 **Report** :
-[OSPF (Intra-Domain-Routing)](intra-domain-routing/README.md)
+[OSPF (Intra-Domain-Routing README)](intra-domain-routing/README.md)
 
 ### 3. BGP Inter-Domain Routing 🌍
 - BGP (Border Gateway Protocol) setup
