@@ -27,6 +27,8 @@ The routers are configured as follows:
 
 ## Topology
 The topology includes the following interconnections between the routers:
+![image](https://github.com/user-attachments/assets/84b6919b-b7dd-414c-8e2f-2721dcb376b1)
+
 
 - R1 (AS100) ↔ R2 (AS200) via `10.10.1.0/24`
 - R1 (AS100) ↔ R3 (AS300) via `10.10.2.0/24`
@@ -44,18 +46,22 @@ Each router also has its own internal networks:
 ```bash
 R1# show ip bgp
 ```
+```bash
+R1# show route-map
+```
+![Screenshot 2024-12-15 184101](https://github.com/user-attachments/assets/c8720b1a-f2d7-48a4-a1dc-a3e153579f73)
+
 
 2. **AS-Path Prepending**: To confirm the effect of AS-Path prepending, check the BGP route advertisements from R1 to R2. R2 will receive routes with additional AS numbers added by R1.
 
 ```bash
 R1# show ip bgp neighbors 10.10.2.2 advertised-routes
 ```
+![image](https://github.com/user-attachments/assets/0ebc1353-4f3d-4e00-beaa-d4e6caa759b4)
+
+
+![image](https://github.com/user-attachments/assets/3a756404-f578-4fc0-8496-2480daaeafe6)
+
 
 ## Licencse
 This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
-
-## Project Report (in Indonesian)
-
-For more detailed information on the project setup, configuration, and results, refer to the full report:
-
-[Inter-domain Routing.pdf](https://github.com/user-attachments/files/17449582/Tugas.Inter-domain.Routing_225150201111009_DANI.ADRIAN.pdf)
