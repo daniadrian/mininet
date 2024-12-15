@@ -78,17 +78,25 @@ This project implements BGP (Border Gateway Protocol) routing in a Mininet envir
    - OSPF for internal routing within each AS
 3. Ensure proper connectivity between all clients
 
-## Development Status
-🚧 **Note**: This repository is currently under development.
+# Testing and Results
+```
+show ip prefix-list
+```
+![Screenshot 2024-12-15 191142](https://github.com/user-attachments/assets/7c996ad2-c0f6-4c40-9a76-8a0583d790a4)
 
-## To-Do List
-- [ ] Network topology implementation
-- [ ] OSPF configuration for each AS
-- [ ] iBGP mesh configuration within AS
-- [ ] eBGP peering configuration
-- [ ] Client connectivity setup
-- [ ] Testing and validation
-- [ ] Documentation completion
+Daftar prefix-list yang telah dikonfigurasi di router, termasuk nama, urutan, aturan yang digunakan, dan jumlah entri dalam prefix-list.
+
+```
+C11 traceroute C33
+```
+![image](https://github.com/user-attachments/assets/a35968b5-655c-41da-9758-47a238edf8fd)
+
+```
+show ip bgp neighbors 10.10.1.2 received-routes
+```
+![image](https://github.com/user-attachments/assets/c780b2fb-60e8-4c91-99ab-5720747daff7)
+
+`show ip bgp neighbors 10.10.1.2 received-routes` menampilkan semua rute yang diterima dari neighbor BGP 10.10.1.2, termasuk informasi Next Hop, AS-Path, dan status rute.
 
 ## Licencse
 This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
