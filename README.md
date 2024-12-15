@@ -47,7 +47,7 @@ Welcome! This repository contains a collection of networking projects using Mini
 - BGP policy configurations
 
 **Report** :
-[iBGP & eBGP README](bgp-routing/README.md)
+[iBGP & eBGP README](iBGP-eBGP/README.md)
 
 ### 5. SRv6 (Segment Routing IPv6) 🚀
 *Coming Soon*
