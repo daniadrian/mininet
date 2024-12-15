@@ -20,6 +20,8 @@ This scenario uses the following routers:
 
 ## Topology
 The topology includes the following interconnections between the routers:
+![Screenshot 2024-12-15 183905](https://github.com/user-attachments/assets/a2f5d352-eff6-4552-90db-e122ecfbe104)
+
 
 - R1 (AS100) ↔ R2 (AS200) via `10.10.1.0/24`
 - R1 (AS100) ↔ R3 (AS300) via `10.10.2.0/24`
@@ -33,31 +35,14 @@ Each router also has its own internal networks:
 
 ## Testing
 1. AS-Path Prepending: You can verify the AS-path prepending by checking the BGP route advertisements from R1 to R2. R2 will receive the routes with additional AS numbers added by R1.
+2. Prefix Filtering
 
 ```bash
 R2# show ip bgp neighbors 10.10.1.1 advertised-routes
 ```
+![image](https://github.com/user-attachments/assets/47b96cae-81fa-4d84-937d-ac0fcda92455)
 
-2. Prefix Filtering: On R3, you can confirm that it only receives prefixes directly from R1, without any transit prefixes being passed from R2.
 
-```bash
-R3# show ip bgp neighbors 10.10.2.1 advertised-routes
-```
-
-3. OSPF: Each router will also have OSPF running within its own AS, ensuring internal communication. You can verify the OSPF configuration and routing table with:
-
-```bash
-R1# show ip ospf neighbor
-R2# show ip ospf neighbor
-R3# show ip ospf neighbor
-
-```
 
 ## Licencse
 This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
-
-## Project Report (in Indonesian)
-
-For more detailed information on the project setup, configuration, and results, refer to the full report:
-
-[Inter-Domain-Routing.pdf](https://github.com/user-attachments/files/17414904/Inter-Domain-Routing.pdf)
