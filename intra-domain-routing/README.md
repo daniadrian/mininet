@@ -2,12 +2,6 @@
 
 This repository contains a Python script (`ospf-lab.py`) that simulates an OSPF (Open Shortest Path First) network using Mininet. The script creates a topology with multiple routers and hosts, demonstrating both single-area and multi-area OSPF configurations.
 
-## Requirements
-
-- Python 3
-- Mininet
-- FRRouting (FRR)
-
 ## Usage
 
 To run the OSPF lab simulation:
@@ -24,41 +18,8 @@ The script creates a network topology with three subnets, each containing a main
 
 In multi-area OSPF, the network is divided into multiple areas, with Area 0 serving as the backbone. This configuration improves scalability and reduces the processing load on routers.
 
-```mermaid
-graph TB
-    subgraph "Area 0 (Backbone)"
-        R1((R1)) --- R2((R2))
-        R2 --- R3((R3))
-        R3 --- R1
-    end
-    
-    subgraph "Area 1"
-        R1 ---|eth0| S1{S1}
-        S1 ---|eth0| R1_1((R1_1))
-        S1 ---|eth0| R1_2((R1_2))
-        R1_1 ---|eth1| C1_1[C1_1]
-        R1_2 ---|eth1| C1_2[C1_2]
-    end
-    
-    subgraph "Area 2"
-        R2 ---|eth0| S2{S2}
-        S2 ---|eth0| R2_1((R2_1))
-        S2 ---|eth0| R2_2((R2_2))
-        R2_1 ---|eth1| C2_1[C2_1]
-        R2_2 ---|eth1| C2_2[C2_2]
-    end
-    
-    subgraph "Area 3"
-        R3 ---|eth0| S3{S3}
-        S3 ---|eth0| R3_1((R3_1))
-        S3 ---|eth0| R3_2((R3_2))
-        R3_1 ---|eth1| C3_1[C3_1]
-        R3_2 ---|eth1| C3_2[C3_2]
-    end
+![image](https://github.com/user-attachments/assets/22d474f2-8a9a-4be5-b839-5b5d080ef286)
 
-    classDef switch fill:#f9f,stroke:#333,stroke-width:4px;
-    class S1,S2,S3 switch;
-```
 
 ## Network Components
 
@@ -71,13 +32,6 @@ graph TB
 
 The script generates configuration files for each router using templates. These configurations are stored in the specified directory and are used to set up OSPF routing on the routers.
 
-## Customization
-
-You can modify the `OSPFLab` class in the script to adjust the network topology, IP addressing, or OSPF areas as needed for your specific requirements.
-
-## Note
-
-This lab is designed for educational purposes and may need additional configuration for production use. Ensure you have the necessary permissions and understanding of OSPF before deploying in a live environment.
 
 ## ADDITIONAL CONFIGURATION !
 ```bash
@@ -116,9 +70,9 @@ Finished initializing network in: 1.1319239139556885 seconds
 
 # Intra-domain Routing Task with OSPF Single Area and Multi-Area - Mininet
 
-Experiment Scenario 1: All routers run OSPF in a single area.
+### Experiment Scenario 1: All routers run OSPF in a single area.
 
-Experiment Scenario 2: Run OSPF in a multi-area configuration.
+### Experiment Scenario 2: Run OSPF in a multi-area configuration.
 
 ***IMPORTANT, READ THIS SECTION!***
 
@@ -126,6 +80,7 @@ Experiment Scenario 2: Run OSPF in a multi-area configuration.
 
 **For Scenario 1, make changes to each router's frr-config. The change required is to set all areas to area 0 (Single Area). Make the changes using VS Code.**
 
+**Config For Multi Area :**
 ### frr.conf R1
 ```bash
 frr version 8.5.4
@@ -366,10 +321,31 @@ line vty
 
 ```
 
-# Project Report (in Indonesian)
-For more detailed information on the project setup, configuration, and results, refer to the full report:
+# Testing and Results
+### Testing Steps:
+#### Single Area
+#### 1. **Run the OSPF Script**:
+To run the OSPF script, use the following command:
+```
+sudo python3 ospf-lab.py
+```
 
-[Intra-domain Routing.pdf](https://github.com/user-attachments/files/17355927/Tugas.Intra-domain.Routing_225150201111009_DANI.ADRIAN.pdf)
+#### 2. **Enter vtysh Mode on Router R1**:
+To access the router and enter OSPF configuration mode, run the following command:
+```
+R1 vtysh
+```
+
+#### 3. **Show OSPF Database**:
+After entering vtysh mode, use the following command to display the OSPF database:
+```
+show ip ospf database
+```
 
 
+### Multi Area
+Adjust the configuration to a multi-area setup, then run the same commands as for the Single Area setup.
 
+
+# Licencse
+This project is licensed under the Creative Commons Legal Code CC0 1.0 Universal. See the [LICENSE](LICENSE) file for details.
