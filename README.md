@@ -50,7 +50,8 @@ Welcome! This repository contains a collection of networking projects using Mini
 [iBGP & eBGP README](iBGP-eBGP/README.md)
 
 ### 5. SRv6 (Segment Routing IPv6) 🚀
-*Coming Soon*
+[SRv6 READMEE](srv6lab/README.md)
+
 
 ## Quick Start 🚀
 Follow these steps to set up the network and test static routing between two hosts.
